@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 user_preferences = {}
 recipes = [
-    {'name': 'Cheese Sandwich', 'ingredients': 'Bread, Cheese, Babys Blood', 'cuisine': 'Irish', 'author': 'Irish Witch from the tenth century'},
+    {'name': 'Cheese Sandwich', 'ingredients': 'Bread, Cheese', 'cuisine': 'Irish', 'author': 'Irish Witch from the 10th century'},
     {'name': 'Spaghetti Carbonara', 'ingredients': 'Spaghetti, Eggs, Pancetta, Parmesan Cheese, Black Pepper', 'cuisine': 'Italian'},
     {'name': 'Chicken Curry', 'ingredients': 'Chicken, Curry Powder, Coconut Milk, Onion, Garlic, Ginger, Tomatoes', 'cuisine': 'Japanese'},
     {'name': 'Vegetable Stir Fry', 'ingredients': 'Broccoli, Carrots, Bell Peppers, Soy Sauce, Ginger, Garlic, Sesame Oil', 'cuisine': 'International'}]
