@@ -1,0 +1,22 @@
+body
+    {background-color: #ffe0c5; /* Light orange background */
+    font-family: serif, Times New Roman;
+    color: #333333; /* Dark gray font color */}
+
+h1
+    {font-size: 48px; /* Font size for h1 elements */
+    margin-bottom: 10px;}
+
+p
+    {font-size: 24px; /* Font size for p elements */}
+
+form input[type="text"]
+    {padding: 5px;
+    margin-bottom: 10px;}
+
+form input[type="submit"]
+    {background-color: #990000; /* Deep red background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;}

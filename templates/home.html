@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Recipe Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Personalized Recipe Planner</h1>
+    <h1>~ Home page ~</h1>
+    <p>Please enter your name to get started:</p>
+    <form action="/preferences" method="get">
+        <input type="text" name="name" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

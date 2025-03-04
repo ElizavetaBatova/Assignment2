@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Recipes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Enter Your Recipes</h1>
+    <form action="/recipe_input" method="post">
+        <label for="recipe_name">Recipe Name:</label>
+        <input type="text" name="recipe_name" required><br><br>
+        <label for="ingredients">Ingredients:</label>
+        <input type="text" name="ingredients" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form action="/preferences" method="get">
+        <input type="submit" value="Back to Preferences">
+    </form>
+</body>
+</html>

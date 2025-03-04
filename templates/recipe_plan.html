@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personalized Recipe Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Your Personalized Recipe Plan</h1>
+    <p>Number of Meals per Week: {{ user_preferences['meals_per_week'] }}</p>
+    <p>Here you can see recipes that may be of interest to you and suit your eating habits!</p>
+    
+    {% if not filtered_recipes %}
+        <p>:< Unfortunately, no recipes match your preferences. Please add more recipes T.T</p>
+    {% else %}
+        {% for recipe in filtered_recipes %}
+            <h2>{{ recipe['name'] }}</h2>
+            <p>{{ recipe['ingredients'] }}</p>
+        {% endfor %}
+    {% endif %}
+    
+    <form action="/recipe_input" method="get">
+        <input type="submit" value="Enter Recipes">
+    </form>
+</body>
+</html>
+
+

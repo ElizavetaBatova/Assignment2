@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Preferences</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hello, {{ name }}!</h1>
+    <p>Enter Your Preferences to let us know</p>
+    <P>what recipes can be interesting for you.
+    <form action="/preferences" method="post">
+        <label for="dietary_restrictions">Dietary Restrictions:</label>
+        <input type="text" name="dietary_restrictions" required><br><br>
+        <label for="favorite_ingredients">Favorite Ingredients:</label>
+        <input type="text" name="favorite_ingredients" required><br><br>
+        <label for="favorite_cuisine">Favorite Cuisine:</label>
+        <input type="text" name="favorite_cuisine" required><br><br>
+        <label for="meals_per_week">Number of Meals per Week:</label>
+        <input type="number" name="meals_per_week" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
