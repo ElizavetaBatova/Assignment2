@@ -40,14 +40,12 @@ def recipe_plan():
     if not recipes:
         return render_template('no_recipes.html')
 
-    # Ensure case-insensitive filtering
     dietary_restrictions = user_preferences.get('dietary_restrictions', '').lower()
     favorite_cuisine = user_preferences.get('favorite_cuisine', '').lower()
 
-    # Filter recipes based on dietary restrictions and favorite cuisine
     filtered_recipes = [
         recipe for recipe in recipes
-        if dietary_restrictions not in recipe['ingredients'].lower() and  # Block restricted ingredients
+        if dietary_restrictions not in recipe['ingredients'].lower() and 
         (favorite_cuisine in recipe['name'].lower() or favorite_cuisine in recipe['cuisine'].lower())
     ]
 
