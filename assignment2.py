@@ -47,8 +47,7 @@ def recipe_plan():
     filtered_recipes = [
         recipe for recipe in recipes
         if dietary_restrictions not in recipe['ingredients'].lower() and 
-        (favorite_cuisine in recipe['name'].lower() or favorite_cuisine in recipe['cuisine'].lower())
-    ]
+        (favorite_cuisine in recipe['name'].lower() or favorite_cuisine in recipe['cuisine'].lower() or favorite_cuisine == ' ' or favorite_cuisine == 'none' or favorite_ingredients in recipe['ingredients'] or favorite_ingredients == ' ' or favorite_ingredients == 'none')]
 
     return render_template('recipe_plan.html', filtered_recipes=filtered_recipes, user_preferences=user_preferences)
 
