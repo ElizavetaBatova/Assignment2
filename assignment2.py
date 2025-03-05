@@ -18,6 +18,7 @@ def preferences():
     if request.method == 'POST':
         user_preferences['dietary_restrictions'] = request.form['dietary_restrictions'].lower()
         user_preferences['favorite_cuisine'] = request.form['favorite_cuisine'].lower()
+        user_preferences['favorite_ingredients'] = request.form['favorite_ingredients'].lower()
         user_preferences['meals_per_week'] = int(request.form['meals_per_week'])
         return redirect(url_for('recipe_plan'))
     else:
