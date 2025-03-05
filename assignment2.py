@@ -43,6 +43,7 @@ def recipe_plan():
 
     dietary_restrictions = user_preferences.get('dietary_restrictions', '').lower()
     favorite_cuisine = user_preferences.get('favorite_cuisine', '').lower()
+    favorite_ingredients = user_preferences.get('favorite_ingredients', '').lower()
 
     filtered_recipes = [
         recipe for recipe in recipes
